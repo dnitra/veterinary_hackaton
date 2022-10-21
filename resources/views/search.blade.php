@@ -43,9 +43,9 @@
                 <tr>
                     <td> {{ $pet->name }} - {{ $pet->species }}</td>
                     <td>
-                        {{-- <a href={{ action('AnimalController@petDetail', $pet->id) }}>
+                        <a href={{ action('AnimalController@animalDetail', $pet->id) }}>
                             <button>See animal</button>
-                        </a> --}}
+                        </a>
                     </td>
                 </tr>
             @endforeach

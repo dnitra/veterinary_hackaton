@@ -3,16 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnerController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get(
     '/',
@@ -28,6 +18,12 @@ Route::get(
     '/search',
     ['App\Http\Controllers\SearchController', 'search']
 );
+
+
+
+Route::get('/animal/{animal_id}', [AnimalController::class, 'animalDetail'])->name('animal.detail');
+Route::put('/animal/{animal}/update', [AnimalController::class, 'update'])->name('animal.update');
+Route::delete('/animal/{id}/deleted', [AnimalController::class, 'delete'])->name('animal.delete');
 
 
 Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail' ])->name('owners.detail');
