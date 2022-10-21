@@ -1,5 +1,5 @@
-
 body {
+    background-image: url("/img/veterinary-clinic.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@ input {
     border-radius: 5%;
     border: none;
     width: 15em;
-    height: 2em;  
+    height: 2em;
     font-weight: bold;
     color: black;
 }
@@ -40,3 +40,4 @@ img {
     height: 300px;
 }
 
+/* ---------------------------------------------Style for the homepage--------------------------------------------------------------- */
