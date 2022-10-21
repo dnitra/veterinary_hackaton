@@ -15,8 +15,6 @@
         @csrf
         <input type="text" name="firstName" placeholder="Search by first name">
         <input type="text" name="lastName" placeholder="Search by surname">
-        <input type="text" name="pet_name" placeholder="Search by pet's name">
-
         <button type="submit">Search</button>
 
     </form>
@@ -27,7 +25,7 @@
             @foreach ($owners as $owner)
                 <tr>
                     <td>
-                        <h2>{{ $owner->first_name }} {{ $owner->surname }}</h2>
+                        <h2>{{ $owner->surname }} {{ $owner->first_name }} </h2>
                     </td>
                     <td>
 

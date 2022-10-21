@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalController;
 
 use App\Http\Controllers\OwnerController;
-use App\Http\Controllers\AnimalController;
+
 
 
 Route::get(
@@ -14,7 +14,7 @@ Route::get(
 );
 
 Route::get(
-    '/search-view',
+    '/search',
     ['App\Http\Controllers\SearchController', 'index']
 );
 
@@ -30,9 +30,9 @@ Route::get('/animal/{animal_id}', [AnimalController::class, 'animalDetail'])->na
 Route::put('/animal/{animal}/update', [AnimalController::class, 'update'])->name('animal.update');
 Route::delete('/animal/{id}/deleted', [AnimalController::class, 'delete'])->name('animal.delete');
 
-Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail' ])->name('owners.detail');
+Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail'])->name('owners.detail');
 
-Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update' ])->name('owners.update');
+Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update'])->name('owners.update');
 
 Route::delete('/owner/{id}/delete', [OwnerController::class, 'delete'])->name('owner.delete');
 
@@ -42,4 +42,3 @@ Route::delete('/owner/{id}/delete', [OwnerController::class, 'delete'])->name('o
 Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail'])->name('owners.detail');
 
 Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update'])->name('owners.update');
-
