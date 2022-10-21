@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OwnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::get(
 Route::get('/pet/{pet_id}', function () {
     return view('pet_detail');
 });
-Route::get('/owner/{owner_id}', function () {
-    return view('owner_detail');
-});
+Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail' ])->name('owners.detail');
+
+Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update' ])->name('owners.update');
+
+
