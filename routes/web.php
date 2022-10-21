@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,9 @@ Route::get('/search', function () {
 Route::get('/search/{owner-first_name}/{owner-surname}/{petName}', function () {
     return view('search');
 });
-Route::get('/pet/{pet_id}', function () {
-    return view('pet_detail');
-});
+Route::get('/animal/{animal_id}', [AnimalController::class, 'animalDetail'])->name('animal.detail');
+Route::put('/animal/{animal}/update', [AnimalController::class, 'update'])->name('animal.update');
+Route::delete('/animal/{id}/deleted', [AnimalController::class, 'delete'])->name('animal.delete');
 Route::get('/owner/{owner_id}', function () {
     return view('owner_detail');
 });
