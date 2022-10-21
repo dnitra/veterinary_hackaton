@@ -31,7 +31,7 @@
                     </td>
                     <td>
 
-                        <a href="">
+                        <a href="{{ action('OwnerController@ownerDetail', $owner->id) }}">
                             <button type="submit">See
                                 Owner</button>
                         </a>
@@ -42,7 +42,11 @@
                         @foreach ($owner->animal as $pet)
                 <tr>
                     <td> {{ $pet->name }} - {{ $pet->species }}</td>
-                    <td><button>See animal</button></td>
+                    <td>
+                        {{-- <a href={{ action('AnimalController@petDetail', $pet->id) }}>
+                            <button>See animal</button>
+                        </a> --}}
+                    </td>
                 </tr>
             @endforeach
             </td>
@@ -50,17 +54,6 @@
             </tr>
     @endforeach
     </table>
-
-
-
-    {{-- <ul>
-            @foreach ($owner->animals as $animal)
-                <li>
-                    {{ $animal->name }}
-                </li>
-            @endforeach
-        </ul> --}}
-
 
     @endif
 
