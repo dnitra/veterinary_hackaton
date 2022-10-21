@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
+});
+Route::get('/search', function () {
+    return view('search');
+});
+Route::get('/search/{owner-first_name}/{owner-surname}/{petName}', function () {
+    return view('search');
+});
+Route::get('/pet/{pet_id}', function () {
+    return view('pet_detail');
+});
+Route::get('/owner/{owner_id}', function () {
+    return view('owner_detail');
 });
