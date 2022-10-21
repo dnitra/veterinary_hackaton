@@ -30,4 +30,6 @@ Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail' ])->name(
 
 Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update' ])->name('owners.update');
 
+Route::delete('/owner/{id}/delete', [OwnerController::class, 'delete'])->name('owner.delete');
+
 

@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: navajowhite;
+    flex-direction: column;
+}
+
+h1:hover {
+    color: white;
+}
+
+label:hover {
+    color: white;
+}
+
+button {
+    width: 16em;
+    height: 2em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+input {
+    border-radius: 5%;
+    border: none;
+    width: 15em;
+    height: 2em;  
+    font-weight: bold;
+    color: black;
+}
