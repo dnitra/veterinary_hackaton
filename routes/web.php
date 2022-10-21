@@ -13,15 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
-Route::get('/search', function () {
-    return view('search');
-});
-Route::get('/search/{owner-first_name}/{owner-surname}/{petName}', function () {
-    return view('search');
-});
+Route::get(
+    '/',
+    ['App\Http\Controllers\HomePageController', 'homePage']
+);
+
+Route::get(
+    '/search-view',
+    ['App\Http\Controllers\SearchController', 'index']
+);
+
+Route::get(
+    '/search',
+    ['App\Http\Controllers\SearchController', 'search']
+);
+
 Route::get('/pet/{pet_id}', function () {
     return view('pet_detail');
 });
