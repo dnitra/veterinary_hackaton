@@ -21,9 +21,11 @@ class SearchController extends Controller
     {
         $firstName = $request->input("firstName");
         $lastName = $request->input("lastName");
-        $petName = $request->input("pet_name");
+
         $owners = Owner::where("first_name", "LIKE", "%" . $firstName . "%")
             ->where("surname", "LIKE", "%" . $lastName . "%")
+            ->orderby("surname")
+            ->limit(100)
             ->get();
         $animals = Animal::get();
 

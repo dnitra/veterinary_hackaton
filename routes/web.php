@@ -14,7 +14,7 @@ Route::get(
 );
 
 Route::get(
-    '/search-view',
+    '/search',
     ['App\Http\Controllers\SearchController', 'index']
 );
 
