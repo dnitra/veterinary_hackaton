@@ -4,19 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 use App\Models\Animal;
 
-
-class Image extends Model
+class Owner extends Model
 {
     use HasFactory;
-
 
 
     public function animal()
     {
 
-        return $this->belongsTo(Animal::class);
+        return $this->hasMany(Animal::class);
     }
 }
