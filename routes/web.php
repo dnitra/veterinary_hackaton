@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\AnimalController;
 
 
 Route::get(
@@ -26,8 +27,6 @@ Route::put('/animal/{animal}/update', [AnimalController::class, 'update'])->name
 Route::delete('/animal/{id}/deleted', [AnimalController::class, 'delete'])->name('animal.delete');
 
 
-Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail' ])->name('owners.detail');
+Route::get('/owner/{owner_id}', [OwnerController::class, 'ownerDetail'])->name('owners.detail');
 
-Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update' ])->name('owners.update');
-
-
+Route::put('/owner/{owner_id}/update', [OwnerController::class, 'update'])->name('owners.update');

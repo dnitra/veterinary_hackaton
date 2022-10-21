@@ -43,6 +43,7 @@
                 <tr>
                     <td> {{ $pet->name }} - {{ $pet->species }}</td>
                     <td>
+
                         <a href={{ action('AnimalController@animalDetail', $pet->id) }}>
                             <button>See animal</button>
                         </a>
