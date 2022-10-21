@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Owner;
+use App\Models\Image;
+
 
 class Animal extends Model
 {
@@ -17,6 +19,6 @@ class Animal extends Model
 
     public function image()
     {
-        return $this->hasMany(Image::class);
+        return $this->belongsTo(Image::class);
     }
 }
